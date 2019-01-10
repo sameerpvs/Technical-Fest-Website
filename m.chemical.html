@@ -1,0 +1,171 @@
+<html>
+<title>Aagama | 2K16</title>
+<head> <link rel="icon"  href="myicon.ico">	
+<!-- a helper script for vaidating the form-->
+<script language="JavaScript" src="gen_validatorv31.js" type="text/javascript"></script>
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="tech.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  
+.body{
+background-color:#333333;
+}  
+.panel-body {
+	padding: 10px;
+}
+.well {
+	margin-bottom: 10px;
+}
+.container {
+	text-align: center;
+}
+</style>
+  <style type="text/css">
+body {
+	background-image: url("images/bg1.png");
+	color: #333;
+	font-family: Josefin Sans;
+}
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #333;
+	border-color: #aaa;
+}
+.panel-title{
+    color: #aaa;
+}
+.panel-heading a:focus, a:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+</style>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="body">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid" >
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="m.home.html">Aagama 2k16</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="m.home.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="m.tech.html">Tech Zone</a></li>
+            <li><a href="m.open.html">Open Zone</a></li>
+            <li><a href="m.skill.html">Skill Zone</a></li>
+          </ul>
+        </li>
+        <li><a href="m.team.html">Team</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Register<span class="glyphicon glyphicon-log-in"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="m.tech.html">Tech Zone</a></li>
+            <li><a href="m.common.html">Open Zone</a></li>
+            <li><a href="m.skil.html">Skill Zone</a></li>
+        </ul>
+        </li>
+    </div>
+  </div>
+</nav>
+
+<div class="container" id="form-container">
+
+<h1 id="head"> Registration Form </h1>
+<div id="form">
+<form role="form" name="CHEMregistration" method="post" action="chemicalm.php">
+
+<div class="form-group">
+	<label  for="name">Name * </label>
+<INPUT type="text" class="form-control" name="name" maxlength="50" size="30">
+</div>
+<div class="form-group">
+<label for="College_name">College Name *</label>
+
+<input type="text" class="form-control" name="clg_name" size ="30">
+</div>
+
+<div class="form-group">
+ <label for="branch">Course/Branch *</label>
+
+<input type="text"class="form-control" name="branch" size ="30">
+</div>
+<div class="form-group" id="list">
+<label for="year"  >Year *</label>
+<select name="year" class="form-control">
+  <option value="First" >Fresher</option>
+  <option value="Second">Sophomore</option>
+  <option value="Pre-Final">Pre-Final</option>
+  <option value="Final">Final</option>
+</select>
+</div>
+<div class="form-group" " >
+ <label for="events list" >Technical Events : </label>
+<label class="checkbox" >
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Paper Presentation">Paper Presentation
+</label>
+<label class="checkbox">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Poster Presentation">Poster Presentation
+</label>
+<label class="checkbox">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Technical Quiz">Technical Quiz
+</label>
+<label class="checkbox">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Compound Preparation">Compound Preparationa
+</label>
+
+</div>
+<div class="form-group">
+<label for="phone">Contact Number * </label>
+
++91<input type="telephone" class="form-control" name="mobile" maxlength="10" >
+</div>
+
+<div class="form-group">
+ <label for="email">E-mail *</label>
+
+<input type="email" class="form-control" name="email" maxlength="40" >
+
+ </div>
+
+ <div class="form-group" id="submit">
+  <!--<input type="submit" class="btn btn-secondary" onclick="return confirm('Are you sure?')" value="Submit"> --> 
+  <input type ="submit"  style="background-color:transparent" onclick="return confirm('Are you sure?')" value="Submit"> 
+ </div>
+
+</form>
+
+
+
+
+<script language="JavaScript">
+var frmvalidator  = new Validator("CHEMregistration");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("branch","req","Please provide your branch details");
+frmvalidator.addValidation("mobile","req","Please provide your mobile number");
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("clg_name","req","Please provide your college name");
+frmvalidator.addValidation("email","email","Please enter a valid email address");
+</script>
+</div>
+</div>
+</body>
+</html>

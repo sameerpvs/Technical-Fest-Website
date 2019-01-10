@@ -1,0 +1,82 @@
+
+.navbar
+{
+background-color:white;
+height:100px;
+font-family:ps;
+padding-top:20px;
+font-weight:bold;
+
+  border-bottom:1px solid white;
+    
+
+}
+
+.navbar-nav>li{
+margin-top:-20px;
+padding-top:20px;
+margin-left:20px;
+height:100px;
+}
+.navbar #myNavbar a{
+transition-property:color,text-shadow;
+transition-duration:2s;
+color:gold;
+}
+.navbar #myNavbar a:hover {
+color:black;
+text-shadow: 0 0 5px white;
+
+}
+
+.navbar-nav>li :hover {
+border-bottom:5px solid gold;
+
+
+}
+
+.navbar #myNavbar a:active{
+border-bottom:5px solid gold;
+background-color:white;
+}
+.dropdown-menu{
+background-color:black;
+font-weight:bolder;
+color:white;
+
+}
+
+
+.dropdown-menu li a{
+background-color:black;
+font-weight:bolder;
+color:white;
+}
+.dropdown-menu li:hover a{
+background-color:black;
+
+}
+@font-face {font-family:basic;src: url(fontt/basictitlefont.ttf);}
+@font-face {font-family:ps;src: url(fontt/ProductSans-Regular.ttf);}
+@font-face {font-family:le;src: url(fontt/league-gothic.regular.ttf);}
+
+
+
+.navbar-brand img{
+
+margin-left:-10px;
+margin-top:-15px;
+height:75px;
+width:170px;
+
+}
+
+
+
+
+
+body{
+ padding-top:70px;
+ 
+background:none;
+}

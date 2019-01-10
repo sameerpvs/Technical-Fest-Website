@@ -1,0 +1,162 @@
+<html>
+<title>Aagama | 2K16</title>
+</style>	
+<!-- a helper script for vaidating the form-->
+<script language="JavaScript" src="gen_validatorv31.js" type="text/javascript"></script>
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Annual national level techinal fest of the Anurag Group Of Instituions, Hyderabad!">
+<meta name="keywords" content=" aagama cse , mobile responsive,cvsr fest,anurag group of institutions,hyderabad fest, aagama,aagama2k16 fest,fest">
+
+<link rel="stylesheet" type="text/css" href="animate.css">
+<script src="wow.min.js"></script>
+ <script>
+              new WOW().init();
+          </script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="nav_bar.css"/>
+    <link rel="stylesheet" type="text/css" href="tech.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand slideInUp animated" href="index.html"><img src="justaagama.png" alt="Brand" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+	
+      <ul class="nav navbar-nav">
+	  
+        <li><a href="home_aagama.html">HOME</a></li>
+		<li><a href="home_aagama.html#about">ABOUT</a></li>
+		  <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">TECH ZONE<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="events.html">Department Tree</a></li>
+            <li><a href="chemical-tech-events.html">CHEMICAL</a></li>
+			<li><a href="civil-tech-events.html">CIVIL</a></li>
+			<li><a href="cse-tech-events.html">CSE</a></li>
+			<li><a href="ece-tech-events.html">ECE</a></li>
+			<li><a href="eee-tech-events.html">EEE</a></li>
+			<li><a href="it-tech-events.html">IT</a></li>
+			<li><a href="mech-tech-events.html">MECH</a></li>
+			<li><a href="mba-tech-events.html">MBA</a></li>
+			<li><a href="pharm-tech-events.html">PHARMACY</a></li>
+          </ul>
+        </li>
+		<li><a href="open_zone.html">OPEN ZONE</a></li>
+        <li><a href="skill_zone.html">SKILL ZONE</a></li>
+        <li><a href="fun_zone.html">FUN ZONE</a></li>
+		<li><a href="team.html">TEAM</a></li>
+		<li><a href="home_aagama.html#sponsor">SPONSORS</a></li>
+		 <li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">REGISTER<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="events.html">Tech Zone</a></li>
+            <li><a href="common.html">Open Zone</a></li>
+			<li><a href="skill.html">Skill Zone </a></li>
+			
+		
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+  
+
+<div class="container-fluid" id="form-container">
+<div class="row">
+<div class="col-xs-offset-4 col-xs-4 ">
+<h1 id="head">Dept. Of CSE Registration Form </h1>
+<div id="form">
+<form role="form" name="CSEregistration" method="post" action="cse.php">
+
+<div class="form-group">
+	<label  for="name">Name * </label>
+<INPUT type="text" class="form-control" name="name" maxlength="50" size="30">
+</div>
+<div class="form-group">
+<label for="College_name">College Name *</label>
+
+<input type="text" class="form-control" name="clg_name" size ="30">
+</div>
+
+<div class="form-group">
+ <label for="branch">Course/Branch *</label>
+
+<input type="text"class="form-control" name="branch" size ="30">
+</div>
+<div class="form-group" id="list">
+<label for="year"  >Year *</label>
+<select name="year" class="form-control">
+  <option value="First" >Fresher</option>
+  <option value="Second">Sophomore</option>
+  <option value="Pre-Final">Pre-Final</option>
+  <option value="Final">Final</option>
+</select>
+</div>
+<div class="form-group" " >
+ <label for="events list" >Technical Events : </label>
+<label class="checkbox" >
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Paper Presentation">Paper Presentation
+</label>
+<label class="checkbox">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Proster Presentation">Poster Presentation
+</label>
+<label class="checkbox">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Code Quiz">Code Quiz
+</label>
+<label class="checkbox">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="check_list[]" value="Webpage Design">Webpage Design
+</label>
+
+</div>
+<div class="form-group">
+<label for="phone">Contact Number * </label>
+
++91<input type="telephone" class="form-control" name="mobile" maxlength="10" >
+</div>
+
+<div class="form-group">
+ <label for="email">E-mail *</label>
+
+<input type="email" class="form-control" name="email" maxlength="40" >
+
+ </div>
+
+ <div class="form-group" id="submit">
+  <!--<input type="submit" class="btn btn-secondary" onclick="return confirm('Are you sure?')" value="Submit"> --> 
+  <input type ="submit"  style="background-color:transparent" onclick="return confirm('Are you sure?')" value="Submit"> 
+ </div>
+
+</form>
+
+</div>
+<script language="JavaScript">
+var frmvalidator  = new Validator("CSEregistration");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("branch","req","Please provide your branch details");
+frmvalidator.addValidation("mobile","req","Please provide your mobile number");
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("clg_name","req","Please provide your college name");
+frmvalidator.addValidation("email","email","Please enter a valid email address");
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>

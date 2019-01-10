@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Loading Animation using jQuery</title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.backstretch.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+<div id="loader">
+</div>
+<div class="box">
+</div>
+<div class="box">
+</div>
+<div class="box">
+</div>
+<div class="box">
+</div>
+	<script>
+        $.backstretch([
+          "home6.jpg",
+          "home2.jpg",
+          "home3.jpg",
+		  "home4.jpg",
+		  "home5.jpg",
+		  "home1.jpg"
+        ], {
+            fade: 1500,
+            duration: 3000
+        });
+		$(window).load(function(){
+			$("#loader").fadeOut("slow");
+		});
+    </script>
+</body>
+</html>

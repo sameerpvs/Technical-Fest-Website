@@ -1,0 +1,201 @@
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width:100px;
+	height:160px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	 
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	border:2px solid #ff3b3b;
+	
+
+	color:white;
+	
+	
+}
+
+h6{
+margin-top:30px;
+font-family:le;
+font-size:20px;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	background-color:#ff3b3b;
+	color:black;
+}
+#event-list{
+
+background-color:black;
+text-align:center;
+padding-left:50px;
+margin-left:-20px;
+height:550px;
+ box-shadow: 10px 0 10px -2px
+}
+
+#event-content{
+background-color:#4e0000;
+height:550px;
+margin-left:20px;
+text-align:center;
+font-family:le;
+border-radius:5%;
+color:white;
+overflow:hidden;
+}
+#eventc{
+height:100%;
+padding:0px;
+margin-top:-20px;
+
+}
+/*dname{
+background-color:green;
+width:100%;
+margin-right:0px;
+height:100%;
+}*/
+h1{
+text-align:center;
+font-family:le;
+font-size:30px;
+}
+.row{
+margin-top:20px;
+}
+#Register-button:hover{
+background-color: white;
+color:black;
+
+}
+#Register-button {
+    display:block;
+    width:100px;
+	height:50px;
+	 line-height:50px;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    background: black;
+  border:1px solid white;
+    font-size:1.2em;
+    font-weight:bold;
+	font-family:basic;	
+	transition-duration:2s;
+transition-property:color,background-color;
+margin-left:auto;
+margin-right:auto;
+margin-top:10px;
+}
+#Department-Tree {
+    display:block;
+    width:150px;
+	height:50px;
+	 line-height:50px;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    background: black;
+  border:1px solid white;
+    font-size:1.2em;
+    font-weight:bold;
+	font-family:basic;	
+	margin-left:auto;
+margin-right:auto;
+	transition-duration:2s;
+	transition-property:color,background-color;
+	margin-top:10px;
+
+}
+
+#details {
+    display:block;
+    width:80px;
+	height:50px;
+	 line-height:50px;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    background:none;
+border:2px solid black;
+    font-size:15px;
+    font-weight:bold;
+	font-family:basic;	
+	margin-left:auto;
+margin-right:auto;
+	transition-duration:2s;
+	transition-property:color,border;
+	margin-top:80px;
+	
+}
+#one{
+height:600px;
+overflow:hidden;
+}
+#two{
+height:600px;
+overflow:hidden;
+}
+#three{
+height:600px;
+overflow:hidden;
+}
+#four{
+height:600px;
+overflow:hidden;
+}
+#details:hover{
+color:black;
+border:2px solid white;
+}
+
+#Department-Tree:hover{
+
+background-color:white;
+color:black;
+}
+html{
+background-image: url("webbg6.jpg");
+    
+   
+    background-attachment: fixed;
+    
+    background-position: top;
+
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+body{background:none}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aagama 2k16 | Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="nav_bar.css"/>
+    <link rel="stylesheet" type="text/css" href="home_aagma.css"/>
+	<link rel="stylesheet" type="text/css" href="open_zone.css">
+	<script src="video.js">
+	</script>
+	
+	
+	<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(17.4199173,78.6571097);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+/*var marker=new google.maps.Marker({
+  position:myCenter,
+  });*/
+ 
+/* var marker=new google.maps.Marker({
+  position:myCenter,
+  animation:google.maps.Animation.BOUNCE
+  }); -->*/
+/*var infowindow = new google.maps.InfoWindow({
+  content:"AGI(CVSR)"
+  });*/
+  var marker=new google.maps.Marker({
+  position:myCenter,
+  icon:'marker.png'
+  });
+ marker.setMap(map);
+/*infowindow.open(map,marker);*/
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+	
+	
+	
+	<!-- MY CSS & JS
+	
+<script src="js/jquery.js"></script>
+<script src="js/jquery.backstretch.js"></script>
+<script src="js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap.theme.css.map.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap-theme.min.css">-->
+
+	
+
+
+
+
+
+
+<script>
+
+(function($) {
+    $(document).ready(function () {
+        /*-------------------- EXPANDABLE PANELS ----------------------*/
+        var panelspeed = 500; //panel animate speed in milliseconds
+        var totalpanels = 9; //total number of collapsible panels
+        var defaultopenpanel = 0; //leave 0 for no panel open
+        var accordian = false; //set panels to behave like an accordian, with one panel only ever open at once      
+ 
+        var panelheight = new Array();
+        var currentpanel = defaultopenpanel;
+        var iconheight = parseInt($('.icon-close-open').css('height'));
+        var highlightopen = true;
+ 
+        //Initialise collapsible panels
+        function panelinit() {
+                for (var i=1; i<=totalpanels; i++) {
+                    panelheight[i] = parseInt($('#cp-'+i).find('.expandable-panel-content').css('height'));
+                    $('#cp-'+i).find('.expandable-panel-content').css('margin-top', -panelheight[i]);
+                    if (defaultopenpanel == i) {
+                        $('#cp-'+i).find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+                        $('#cp-'+i).find('.expandable-panel-content').css('margin-top', 0);
+                    }
+                }
+        }
+ 
+        $('.expandable-panel-heading').click(function() {
+            var obj = $(this).next();
+            var objid = parseInt($(this).parent().attr('ID').substr(3,2));
+            currentpanel = objid;
+            if (accordian == true) {
+                resetpanels();
+            }
+ 
+            if (parseInt(obj.css('margin-top')) <= (panelheight[objid]*-1)) {
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+                obj.animate({'margin-top':0}, panelspeed);
+                if (highlightopen == true) {
+                    $('#cp-'+currentpanel + ' .expandable-panel-heading').addClass('header-active');
+                }
+            } else {
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.icon-close-open').css('background-position', '0px 0px');
+                obj.animate({'margin-top':(panelheight[objid]*-1)}, panelspeed);
+                if (highlightopen == true) {
+                    $('#cp-'+currentpanel + ' .expandable-panel-heading').removeClass('header-active');
+                }
+            }
+        });
+ 
+        function resetpanels() {
+            for (var i=1; i<=totalpanels; i++) {
+                if (currentpanel != i) {
+                    $('#cp-'+i).find('.icon-close-open').css('background-position', '0px 0px');
+                    $('#cp-'+i).find('.expandable-panel-content').animate({'margin-top':-panelheight[i]}, panelspeed);
+                    if (highlightopen == true) {
+                        $('#cp-'+i + ' .expandable-panel-heading').removeClass('header-active');
+                    }
+                }
+            }
+        }
+        
+       
+        $( window ).resize(function() {
+          panelinit();
+        });
+ 
+        $(window).load(function() {
+            panelinit();
+        }); //END LOAD
+    }); //END READY
+})(jQuery);
+</script>
+	
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="bsindex.html"><img src="justaagama.png" alt="Brand" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+	
+      <ul class="nav navbar-nav">
+	  
+        <li><a href="home_aagama.html">HOME</a></li>
+		  <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">TECH ZONE<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="events.html">Department Tree</a></li>
+            <li><a href="chemical-tech-events.html">CHEMICAL</a></li>
+			<li><a href="civil-tech-events.html">CIVIL</a></li>
+			<li><a href="cse-tech-events.html">CSE</a></li>
+			<li><a href="ece-tech-events.html">ECE</a></li>
+			<li><a href="eee-tech-events.html">EEE</a></li>
+			<li><a href="it-tech-events.html">IT</a></li>
+			<li><a href="mech-tech-events.html">MECH</a></li>
+			<li><a href="mba-tech-events.html">MBA</a></li>
+			<li><a href="pharm-tech-events.html">PHARMACY</a></li>
+          </ul>
+        </li>
+		<li><a href="open-zone.html">OPEN ZONE</a></li>
+        <li><a href="skill-zone.html">SKILL ZONE</a></li>
+        <li><a href="fun_zone.html">FUN ZONE</a></li>
+		<li><a href="sponsors.html">SPONSORS</a></li>
+		 <li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">REGISTER<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="events.html">Tech Zone</a></li>
+            <li><a href="common.html">Open Zone</a></li>
+			<li><a href="skill.html">Skill Zone </a></li>
+			
+		
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+   <div class="container-fluid" id="entertain1">
+  <div class="row">
+  <div class="col-md-12">
+  <h3> Open Zone </h3>
+  <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."		</h4>
+  
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  <!-- main code starts here -->
+  
+  <div class="container-fluid" id="entertain2">
+  <div class="row">
+ 
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-1">
+        <div class="expandable-panel-heading" id="cpp1">
+           <h2> MAKE IN INDIA </h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p>Event Description</p>
+			
+			<a href="common.html" class="e-button"> Register </a>
+        </div>
+    </div>
+	</div>
+	
+	
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-2">
+        <div class="expandable-panel-heading" id="cpp2">
+            <h2>ROBOTICS</h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p>Event Description</p>
+			<a href="common.html" class="e-button"> Register </a>
+			
+ 
+        </div>
+  </div>
+  </div>
+
+ 
+	
+  <div class="col-md-4">
+  <div class="expandable-panel" id="cp-3">
+     <div class="expandable-panel-heading" id="cpp3">
+         <h2>TECHNICAL QUIZ</h2>
+     </div>
+     <div class="expandable-panel-content">
+         <p>Event Description</p>
+		 <a href="common.html" class="e-button"> Register </a>
+     </div>
+  </div> 
+  </div>
+  </div>
+  
+  
+  <div class="row">
+ 
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-4">
+        <div class="expandable-panel-heading" id="cpp4">
+           <h2> VIRTUAL JOB FAIR </h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p>Event Description</p>
+			<a href="common.html" class="e-button"> Register </a>
+        </div>
+    </div>
+	</div>
+	
+	
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-5">
+        <div class="expandable-panel-heading" id="cpp5">
+            <h2>MODEL MAKING</h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p>Event Description</p>
+			<a href="common.html" class="e-button"> Register </a>
+ 
+        </div>
+  </div>
+  </div>
+
+ 
+	
+  <div class="col-md-4">
+  <div class="expandable-panel" id="cp-6">
+     <div class="expandable-panel-heading" id="cpp6">
+         <h2>TECKNOS</h2>
+     </div>
+     <div class="expandable-panel-content">
+         <p>Event Description</p>
+		 <a href="common.html" class="e-button"> Register </a>
+     </div>
+  </div> 
+  </div>
+  </div>
+  
+  
+  <div class="row">
+ 
+  <div class="col-md-4 col-md-offset-4">
+    <div class="expandable-panel" id="cp-7">
+        <div class="expandable-panel-heading" id="cpp7">
+           <h2> DEBATE</h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p>Event Description</p>
+			<a href="common.html" class="e-button"> Register </a>
+        </div>
+    </div>
+	</div>
+	
+
+  </div>
+  
+  
+
+ 
+ 
+  
+
+ 
+</div>
+<body>
+</html>

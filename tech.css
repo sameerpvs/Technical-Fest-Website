@@ -1,0 +1,49 @@
+#form-container{
+
+margin-top:0px;
+}
+
+#form{
+
+color:gold;
+
+font-family:ps;
+font-size :15px;
+}
+
+@font-face {font-family:basic;src: url(fontt/basictitlefont.ttf);}
+@font-face {font-family:ps;src: url(fontt/ProductSans-Regular.ttf);}
+@font-face {font-family:le;src: url(fontt/league-gothic.regular.ttf);}
+@font-face {font-family:sf;src: url(fontt/sf.ttf);}
+html{
+background-image: url("webbg6.jpg");
+    
+   
+    background-attachment: fixed;
+    
+    background-position: top;
+
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+body{
+background:none;
+}
+#submit{
+	
+	color :gold;
+	
+	text-align:center;
+	
+	
+}
+
+#head{
+	text-align:center;
+	color:white;
+	margin-top:40px;
+	font-family:le;
+	font-size:20px;
+	
+}

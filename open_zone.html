@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <link rel="icon"  href="myicon.ico">
+  <title>Aagama 2k16 | Open Zone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Annual national level techinal fest of the Anurag Group Of Instituions, Hyderabad!">
+<meta name="keywords" content=" aagama team , mobile responsive,cvsr fest,anurag group of institutions,hyderabad fest, aagama,aagama2k16 fest,fest">
+
+<link rel="stylesheet" type="text/css" href="animate.css">
+<script src="wow.min.js"></script>
+ <script>
+              new WOW().init();
+          </script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="nav_bar.css"/>
+    <link rel="stylesheet" type="text/css" href="home_aagma.css"/>
+	<link rel="stylesheet" type="text/css" href="open_zone.css">
+	<script src="video.js">
+	</script>
+	
+	
+	<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(17.4199173,78.6571097);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+/*var marker=new google.maps.Marker({
+  position:myCenter,
+  });*/
+ 
+/* var marker=new google.maps.Marker({
+  position:myCenter,
+  animation:google.maps.Animation.BOUNCE
+  }); -->*/
+/*var infowindow = new google.maps.InfoWindow({
+  content:"AGI(CVSR)"
+  });*/
+  var marker=new google.maps.Marker({
+  position:myCenter,
+  icon:'marker.png'
+  });
+ marker.setMap(map);
+/*infowindow.open(map,marker);*/
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+	
+	
+	
+	<!-- MY CSS & JS
+	
+<script src="js/jquery.js"></script>
+<script src="js/jquery.backstretch.js"></script>
+<script src="js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap.theme.css.map.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/inbootstrap/css/bootstrap-theme.min.css">-->
+
+	
+
+
+
+
+
+
+<script>
+
+(function($) {
+    $(document).ready(function () {
+        /*-------------------- EXPANDABLE PANELS ----------------------*/
+        var panelspeed = 500; //panel animate speed in milliseconds
+        var totalpanels = 9; //total number of collapsible panels
+        var defaultopenpanel = 0; //leave 0 for no panel open
+        var accordian = true; //set panels to behave like an accordian, with one panel only ever open at once      
+ 
+        var panelheight = new Array();
+        var currentpanel = defaultopenpanel;
+        var iconheight = parseInt($('.icon-close-open').css('height'));
+        var highlightopen = true;
+ 
+        //Initialise collapsible panels
+        function panelinit() {
+                for (var i=1; i<=totalpanels; i++) {
+                    panelheight[i] = parseInt($('#cp-'+i).find('.expandable-panel-content').css('height'));
+                    $('#cp-'+i).find('.expandable-panel-content').css('margin-top', -panelheight[i]);
+                    if (defaultopenpanel == i) {
+                        $('#cp-'+i).find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+                        $('#cp-'+i).find('.expandable-panel-content').css('margin-top', 0);
+                    }
+                }
+        }
+ 
+        $('.expandable-panel-heading').click(function() {
+            var obj = $(this).next();
+            var objid = parseInt($(this).parent().attr('ID').substr(3,2));
+            currentpanel = objid;
+            if (accordian == true) {
+                resetpanels();
+            }
+ 
+            if (parseInt(obj.css('margin-top')) <= (panelheight[objid]*-1)) {
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+                obj.animate({'margin-top':0}, panelspeed);
+                if (highlightopen == true) {
+                    $('#cp-'+currentpanel + ' .expandable-panel-heading').addClass('header-active');
+                }
+            } else {
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.icon-close-open').css('background-position', '0px 0px');
+                obj.animate({'margin-top':(panelheight[objid]*-1)}, panelspeed);
+                if (highlightopen == true) {
+                    $('#cp-'+currentpanel + ' .expandable-panel-heading').removeClass('header-active');
+                }
+            }
+        });
+ 
+        function resetpanels() {
+            for (var i=1; i<=totalpanels; i++) {
+                if (currentpanel != i) {
+                    $('#cp-'+i).find('.icon-close-open').css('background-position', '0px 0px');
+                    $('#cp-'+i).find('.expandable-panel-content').animate({'margin-top':-panelheight[i]}, panelspeed);
+                    if (highlightopen == true) {
+                        $('#cp-'+i + ' .expandable-panel-heading').removeClass('header-active');
+                    }
+                }
+            }
+        }
+        
+       
+        $( window ).resize(function() {
+          panelinit();
+        });
+ 
+        $(window).load(function() {
+            panelinit();
+        }); //END LOAD
+    }); //END READY
+})(jQuery);
+</script>
+	
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand slideInUp animated" href="index.html"><img src="justaagama.png" alt="Brand" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+	
+      <ul class="nav navbar-nav">
+	  
+        <li><a href="home_aagama.html">HOME</a></li>
+		<li><a href="home_aagama.html#about">ABOUT</a></li>
+		  <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">TECH ZONE<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="events.html">Department Tree</a></li>
+            <li><a href="chemical-tech-events.html">CHEMICAL</a></li>
+			<li><a href="civil-tech-events.html">CIVIL</a></li>
+			<li><a href="cse-tech-events.html">CSE</a></li>
+			<li><a href="ece-tech-events.html">ECE</a></li>
+			<li><a href="eee-tech-events.html">EEE</a></li>
+			<li><a href="it-tech-events.html">IT</a></li>
+			<li><a href="mech-tech-events.html">MECH</a></li>
+			<li><a href="mba-tech-events.html">MBA</a></li>
+			<li><a href="pharm-tech-events.html">PHARMACY</a></li>
+          </ul>
+        </li>
+		<li><a href="open_zone.html">OPEN ZONE</a></li>
+        <li><a href="skill_zone.html">SKILL ZONE</a></li>
+        <li><a href="fun_zone.html">FUN ZONE</a></li>
+		<li><a href="team.html">TEAM</a></li>
+		<li><a href="home_aagama.html#sponsor">SPONSORS</a></li>
+		 <li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">REGISTER<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="events.html">Tech Zone</a></li>
+            <li><a href="common.html">Open Zone</a></li>
+			<li><a href="skill.html">Skill Zone </a></li>
+			
+		
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+   <div class="container-fluid" id="entertain1">
+  <div class="row">
+  <div class="col-md-12">
+  <h3> Open Zone </h3>
+  <h4 align="center">"Boundries aren't meant for everything,some events dont have any."	</h4>
+  
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  <!-- main code starts here -->
+  
+  <div class="container-fluid" id="entertain2">
+  <div class="row">
+ 
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-1">
+        <div class="expandable-panel-heading" id="cpp1">
+           <h2> MAKE IN INDIA </h2>
+         </div>
+        <div class="expandable-panel-content" >
+            
+			<p>Have a unique bussines startup plan ?</p><p>Come let the world know your intention, illustrate your plan and join to have a glimpse of the wonderfull ideas your peer's have. </p> 
+			<a href="common.html" class="e-button"> Register </a>
+        </div>
+    </div>
+	</div>
+	
+	
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-2">
+        <div class="expandable-panel-heading" id="cpp2">
+            <h2>ROBOTICS</h2>
+         </div>
+        <div class="expandable-panel-content">
+            
+			<p> Is your BOT the best ??<p>
+			<p>Participants gets the chance to compete with different bots on different backdrops like F1-race,All-terain, Robo Soccer </p>
+			<p>The best BOT get all the goddies.  Come its time to prove your BOTs worth</p>
+			<a href="common.html" class="e-button"> Register </a>
+			
+ 
+        </div>
+  </div>
+  </div>
+
+ 
+	
+  <div class="col-md-4">
+  <div class="expandable-panel" id="cp-3">
+     <div class="expandable-panel-heading" id="cpp3">
+         <h2>FILMY QUIZ</h2>
+     </div>
+     <div class="expandable-panel-content">
+	 
+	 <p>Are you a movies addict ?? <p>
+         <p>Filmy quiz welcomes all filmy buffs to discover how high your film quotients are!</p>
+		 <p>Compete with other addicts and prove yourself</p>
+		 <p>May the odd's be in your favour</p>
+		 <a href="common.html" class="e-button"> Register </a>
+     </div>
+  </div> 
+  </div>
+  </div>
+  
+  
+  <div class="row">
+ 
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-4">
+        <div class="expandable-panel-heading" id="cpp4">
+           <h2> VIRTUAL JOB FAIR </h2>
+         </div>
+        <div class="expandable-panel-content">
+		
+		<p>Want to face the heat of interview drill before the real test?</p>
+            <p>Participants shall undergo mock placements drive which will be conducted on the ground similar to their college placements .Their merit skills shall be put to test </p>
+			<a href="common.html" class="e-button"> Register </a>
+        </div>
+    </div>
+	</div>
+	
+	
+  <div class="col-md-4">
+    <div class="expandable-panel" id="cp-5">
+        <div class="expandable-panel-heading" id="cpp5">
+            <h2>MODEL MAKING</h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p>Let's prove your creative structural skills<br>
+			Build your own model by the given materials<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;When someone starts using materials and fabrication techniques,they are able to refine their ideas to make them work</p>
+			<a href="common.html" class="e-button"> Register </a>
+ 
+        </div>
+  </div>
+  </div>
+
+ 
+	
+  <div class="col-md-4">
+  <div class="expandable-panel" id="cp-6">
+     <div class="expandable-panel-heading" id="cpp6">
+         <h2>TECHKNOWS</h2>
+     </div>
+     <div class="expandable-panel-content">
+         <p>Are you a Tech Freak??</p>
+		 <p>Here is your chance to prove yourself ,compete with the most nerdy tech guys </p>
+		 <p>Be the nerdest tech guy and win exciting tech products </p>
+		 <a href="common.html" class="e-button"> Register </a>
+     </div>
+  </div> 
+  </div>
+  </div>
+  
+  
+  <div class="row">
+ 
+ <!-- <div class="col-md-4 col-md-offset-4">
+    <div class="expandable-panel" id="cp-7">
+        <div class="expandable-panel-heading" id="cpp7">
+           <h2> DEBATE</h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p>Event Description</p>
+			<a href="common.html" class="e-button"> Register </a>
+        </div>
+    </div>
+	</div>
+	
+
+  </div>
+  
+  -->
+
+ 
+ 
+  
+
+ 
+</div>
+<body>
+</html>
